@@ -12,7 +12,7 @@ from pathlib import Path
 
 #Config Settings
 allowedFields = ["keepWeeks", "exchanges", "currencies", "interval"]
-configPath = Path("~/.spotbit/spotbit.config").expanduser()
+configPath = Path("/home/.spotbit/spotbit.config").expanduser()
 #Default values; these will be overwritten when the config file is read
 exchanges = []
 currencies = []
@@ -21,7 +21,7 @@ keepWeeks = 3 # add this to the config file
 exchange_limit = 2 #when there are more exchanges than this multithreading is ideal
 performance_mode = False
 #Database
-p = Path("~/.spotbit/sb.db").expanduser()
+p = Path("/home/.spotbit/sb.db").expanduser()
 db = sqlite3.connect(p)
 print("db opened in {}".format(p))
 app = Flask(__name__)
